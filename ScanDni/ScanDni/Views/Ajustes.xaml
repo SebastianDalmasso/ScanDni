@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ScanDni.Ajustes">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Button x:Name="BackBt" Text="&#xf053;" FontFamily="FontAwesomeSolid" FontSize="35" Margin="-10,10,0,0"  BackgroundColor="Transparent" TextColor="Black" 
+                    HorizontalOptions="Start" VerticalOptions="Start" Clicked="BackBt_Clicked"/>
+                    <Label Text="Ajustes" VerticalOptions="Center" FontAttributes="Bold" FontSize="22" Margin="5,10,0,0"></Label>
+                </StackLayout>
+            
+                <Frame HasShadow="True" BackgroundColor="Transparent" BorderColor="#ECECEC" Padding="10" Margin="20,0" CornerRadius="10">
+                    <StackLayout Margin="10,0,0,0">
+                        <StackLayout Orientation="Horizontal" Padding="10" Spacing="20">
+                            <Label Text="&#xf3cd;" FontFamily="FontAwesomeSolid" FontSize="26"/>
+                            <Label Text="Vibrar" FontSize="18"/>
+                            <Switch x:Name="SwVibrar" HorizontalOptions="EndAndExpand" Toggled="SwVibrar_Toggled"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Padding="10" Spacing="20">
+                            <Label Text="&#xf093;" FontFamily="FontAwesomeSolid" FontSize="26"/>
+                            <Label Text="AutoGuardado" FontSize="18"/>
+                            <Switch x:Name="SwGuardado" HorizontalOptions="EndAndExpand" Toggled="SwGuardado_Toggled"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Padding="10" Spacing="20">
+                            <Label Text="&#xf0c5;" FontFamily="FontAwesomeRegular" FontSize="26"/>
+                            <Label Text="Copia Completa" FontSize="18"/>
+                            <Switch x:Name="SwCopia" HorizontalOptions="EndAndExpand" Toggled="SwCopia_Toggled"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <Frame HasShadow="True" BackgroundColor="Transparent" BorderColor="#ECECEC" Padding="5" Margin="20,5,20,0" CornerRadius="10">
+                    <Button Text="Calificar App" TextColor="#2ECC71" BackgroundColor="Transparent" FontSize="16" FontAttributes="Bold"
+                            x:Name="BtCalificar" Clicked="BtCalificar_Clicked"/>
+                </Frame>
+            
+                <Frame HasShadow="True" BackgroundColor="Transparent" BorderColor="#ECECEC" Padding="5" Margin="20,5,20,0" CornerRadius="10">
+                    <Button Text="Compartir App" TextColor="#2E86C1" BackgroundColor="Transparent" FontSize="16" FontAttributes="Bold"
+                            x:Name="BtCompartir" Clicked="BtCompartir_Clicked"/>
+                </Frame>
+
+                <Frame HasShadow="True" BackgroundColor="Transparent" BorderColor="#ECECEC" Padding="5" Margin="20,5,20,0" CornerRadius="10">
+                    <StackLayout>
+                        <Label Text="Ver un anuncio para colaborar" HorizontalOptions="Center" FontSize="16" TextColor="Black" Margin="10"/>
+                        <ImageButton x:Name="BtAd" Grid.Row="3" Source="ad.png" BackgroundColor="Transparent" HorizontalOptions="Center"
+                                     Clicked="BtAd_Clicked" Margin="10"/>
+                    </StackLayout>
+                </Frame>
+           
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand"  Margin="0,0,0,10" Spacing="0">
+                    <Button x:Name="BtPrivacidad" Text="Privacidad" FontSize="16" TextColor="Blue" BackgroundColor="Transparent"
+                            Clicked="BtPrivacidad_Clicked" VerticalOptions="End"/>
+                    <Label Text="v. 1.0" FontSize="16" HorizontalTextAlignment="Center" VerticalOptions="Center"/>
+                
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

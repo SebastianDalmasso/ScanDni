@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ScanDni.ScanQr"
+             xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms">
+
+    <StackLayout>
+        <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" RowDefinitions="Auto">
+            <zxing:ZXingScannerView
+                x:Name="scanView"
+                OnScanResult="ScanView_OnScanResult"
+                IsScanning="True"
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand"/>
+            <zxing:ZXingDefaultOverlay/>
+
+            <Button x:Name="BackBt" Text="&#xf137;" FontFamily="FontAwesomeSolid" FontSize="35" Margin="-10,10"  BackgroundColor="Transparent" TextColor="White" 
+                HorizontalOptions="Start" VerticalOptions="Start" Clicked="BackBt_Clicked"/>
+            <Button x:Name="HelpBt" Text="&#xf059;" FontFamily="FontAwesomeRegular" FontSize="35" Margin="-10,10"  BackgroundColor="Transparent" TextColor="White" 
+                HorizontalOptions="End" VerticalOptions="Start" Clicked="HelpBt_Clicked"/>
+            <Button x:Name="FlashlightBt" Text="&#xf0eb;" FontFamily="FontAwesomeRegular" FontSize="45" Margin="0,0,0,15"  BackgroundColor="Transparent" TextColor="White" 
+                HorizontalOptions="Center" VerticalOptions="End" Clicked="FlashlightBt_Clicked"/>
+        </Grid>
+    </StackLayout>
+</ContentPage>

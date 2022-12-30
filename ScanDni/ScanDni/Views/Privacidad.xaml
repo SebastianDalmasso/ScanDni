@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xtc:Popup  xmlns:xtc="http://xamarin.com/schemas/2020/toolkit" 
+            xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="ScanDni.Views.Privacidad"
+            Size="300,300" 
+            Color="Transparent">
+    
+    <Frame CornerRadius="20" HasShadow="True">
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="0,10,10,0" Spacing="20" HorizontalOptions="Center">
+                <Label Text="&#xf21b;" FontFamily="FontAwesomeSolid" FontSize="30"/>
+                <Label Text="Privacidad" FontSize="22" FontAttributes="Bold" TextColor="Black"/>
+            </StackLayout>
+            <Label Text="Los datos no serán compartidos ni almacenados en servidores externos." FontSize="16" TextColor="Black" HorizontalTextAlignment="Center" HorizontalOptions="Center" Margin="15,10,15,5"/>
+            <Label Text="Para tu tranquilidad sólo se guardarán en tu dispositivo." FontSize="16" TextColor="DimGray" HorizontalTextAlignment="Center" HorizontalOptions="Center" Margin="15,5,15,5"/>
+            <Button Text="OK" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand" CornerRadius="10" Clicked="Button_Clicked"
+                    Margin="40,5,40,10" BackgroundColor="#28B463" TextColor="White"/>
+        </StackLayout>
+    </Frame>
+</xtc:Popup>

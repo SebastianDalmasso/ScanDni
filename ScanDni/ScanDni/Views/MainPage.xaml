@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms" 
+             xmlns:admob="clr-namespace:MarcTron.Plugin.Controls;assembly=Plugin.MtAdmob"
+             x:Class="ScanDni.MainPage">
+
+    <StackLayout>
+        <Grid RowDefinitions="3*, *, *">
+            <Frame Grid.Row="0" HasShadow="False" BackgroundColor="Transparent">
+                <forms:AnimationView  x:Name="animationView" IsVisible="False"
+                            Clicked="DniBt_Clicked"
+                            Animation="card.json"
+                            AutoPlay="True"
+                            Speed="0.8"
+                            RepeatMode="Infinite"
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="CenterAndExpand"
+                            BackgroundColor="Transparent"
+                            />
+            </Frame>
+            
+            <StackLayout Grid.Row="1" Orientation="Horizontal" Margin="25,0,25,25" BackgroundColor="Transparent"
+                         VerticalOptions="EndAndExpand" HorizontalOptions="Center" Spacing="40">
+                <StackLayout>
+                    <Button x:Name="QrBt" Text="&#xf029;" FontFamily="FontAwesomeSolid" FontSize="30" Clicked="QrBt_Clicked" 
+                    TextColor="White" BackgroundColor="#28B463" WidthRequest="60" HeightRequest="60" BorderRadius="35"/>
+                    <Label x:Name="LbEscanear" Text="Scan" HorizontalOptions="Center" FontSize="18"/>
+                </StackLayout>
+
+                <StackLayout>
+                    <Button x:Name="ArchivoBt" Text="&#xf187;" FontFamily="FontAwesomeSolid" FontSize="30" Clicked="ArchivoBt_Clicked" 
+                    TextColor="White" BackgroundColor="#2874A6" WidthRequest="60" HeightRequest="60" BorderRadius="35"/>
+                    <Label Text="Archivo" HorizontalOptions="Center" FontSize="18"/>
+                </StackLayout>
+
+                <StackLayout>
+                    <Button x:Name="AjustesBt" Text="&#xf013;" FontFamily="FontAwesomeSolid" FontSize="30" Clicked="AjustesBt_Clicked" 
+                    TextColor="White" BackgroundColor="#2874A6" WidthRequest="60" HeightRequest="60" BorderRadius="35"/>
+                    <Label Text="Ajustes" HorizontalOptions="Center" FontSize="18"/>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout  Grid.Row="2" VerticalOptions="End">
+                <Label x:Name="LblAdMob" Text="askdja" TextColor="White"/>
+                <admob:MTAdView x:Name="AdMob" AdsLoaded="AdMob_AdsLoaded"/>
+            </StackLayout>
+
+        </Grid>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xtc:Popup  xmlns:xtc="http://xamarin.com/schemas/2020/toolkit" 
+            xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="ScanDni.Views.Compartir"
+            Size="330,400" 
+            Color="Transparent">
+    
+    <Frame CornerRadius="20" HasShadow="True">
+        <StackLayout VerticalOptions="Center">
+            <Label Text="&#xf019;" FontFamily="FontAwesomeSolid" FontSize="50" TextColor="Black" HorizontalOptions="Center" Margin="5,10"/>
+            <Label Text="Descargar Archivo" FontSize="20" FontAttributes="Bold" TextColor="Black" HorizontalOptions="Center" Margin="5,10"/>
+            <Label Text="Descarga o comparte tus Dni guardados en los siguientes formatos:" FontSize="16" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="Center" Margin="15,5,15,30"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <StackLayout>
+                    <Button Text="&#xf1c3;" FontFamily="FontAwesomeRegular" FontSize="24" TextColor="#229954" CornerRadius="10" BorderColor="#229954" BorderWidth="1" BackgroundColor="Transparent"
+                            x:Name="BtExel" Clicked="BtExel_Clicked"/>
+                    <Label Text=".xlsx" HorizontalOptions="Center"/>
+                </StackLayout>
+                <StackLayout>
+                    <Button Text="&#xf121;" FontFamily="FontAwesomeSolid" FontSize="24" TextColor="#E74C3C" CornerRadius="10" BorderColor="#E74C3C" BorderWidth="1" BackgroundColor="Transparent"
+                            x:Name="BtJson" Clicked="BtJson_Clicked"/>
+                    <Label Text=".json" HorizontalOptions="Center"/>
+                </StackLayout>
+                <StackLayout>
+                    <Button Text="&#xf15b;" FontFamily="FontAwesomeRegular" FontSize="24" TextColor="Blue" CornerRadius="10" BorderColor="#2874A6" BorderWidth="1" BackgroundColor="Transparent"
+                            x:Name="BtTxt" Clicked="BtTxt_Clicked"/>
+                    <Label Text=".txt" HorizontalOptions="Center"/>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </Frame>
+</xtc:Popup>
